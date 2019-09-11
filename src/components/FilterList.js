@@ -3,8 +3,10 @@ import Filter from "./Filter";
 
 function FilterList() {
   return (
-    <div>
-      FilterList <Filter />
+    <div className="filter__list">
+      <Filter />
+      <Filter />
+      <Filter />
     </div>
   );
 }

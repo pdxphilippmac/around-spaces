@@ -1,33 +1,85 @@
-.App {
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+.main {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
+  /* height: 100vh;
+  width: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.header {
+  color: #f2f2f2;
+  height: 80px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, #275950),
+    color-stop(100, #141726)
+  );
+
+  display: flex;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.filter__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background: #014040;
+  align-items: center;
+  flex-grow: 1;
+
+  padding: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filter {
+  border: black solid 1px;
+  background: rgb(106, 121, 85);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.restaurant__list {
+  flex-wrap: wrap;
+  display: flex;
+
+  justify-content: space-around;
+
+  align-items: flex-start;
+
+  flex-wrap: wrap;
+  background: #428c7f;
+  overflow: hidden;
+}
+.restaurant {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  height: 45vh;
+  width: 45vh;
+  background: linear-gradient(
+    322deg,
+    rgba(170, 173, 166, 1) 0%,
+    rgba(250, 249, 249, 1) 14%,
+    rgba(242, 242, 242, 1) 100%
+  );
+  margin: 5px;
+  justify-content: center;
+  display: flex;
 }
