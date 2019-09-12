@@ -1,5 +1,5 @@
 export const iceCreamFilter = [
-  { name: "Type", otions: ["american", "italian", "vegan", "icecream"] },
+  { name: "Type", options: ["american", "italian", "vegan", "icecream"] },
 
   {
     name: "Distance",

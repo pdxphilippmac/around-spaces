@@ -5,6 +5,11 @@ function Filter(props) {
     <div className="filter">
       <select>
         <option>{props.iceCreamFilter.name}</option>
+        {props.iceCreamFilter.options.map(singleIceCreamFilter => {
+          return (
+            <option key={singleIceCreamFilter}>{singleIceCreamFilter}</option>
+          );
+        })}
       </select>
     </div>
   );
