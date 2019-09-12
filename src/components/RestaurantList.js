@@ -1,21 +1,16 @@
 import React from "react";
 import Restaurant from "./Restaurant";
+import { iceCreamShops } from "../api/icecreamshops";
 
 function RestaurantList() {
   return (
-    <div className="restaurant__list">
-      <Restaurant />
-      <Restaurant />
-      <Restaurant />
-      <Restaurant />
-      <Restaurant />
-      <Restaurant />
-      <Restaurant />
-      <Restaurant />
-      <Restaurant />
-      <Restaurant />
-      <Restaurant />
-    </div>
+    <section className="restaurant__list">
+      {iceCreamShops.map(iceCreamShop => {
+        return (
+          <Restaurant key={iceCreamShop.title} iceCreamShop={iceCreamShop} />
+        );
+      })}
+    </section>
   );
 }
 

@@ -1,12 +1,17 @@
 import React from "react";
 import Filter from "./Filter";
-
+import { iceCreamFilter } from "../api/iceCreamFilter";
 function FilterList() {
   return (
     <div className="filter__list">
-      <Filter />
-      <Filter />
-      <Filter />
+      {iceCreamFilter.map(iceCreamFilter => {
+        return (
+          <Filter
+            key={iceCreamFilter.categories}
+            iceCreamFilter={iceCreamFilter}
+          />
+        );
+      })}
     </div>
   );
 }
