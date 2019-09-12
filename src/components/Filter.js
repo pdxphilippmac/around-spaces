@@ -4,7 +4,7 @@ function Filter() {
   return (
     <div className="filter">
       <select>
-        <option value="">Japanisch</option>
+        <option value="">Cinnamon Bun</option>
         <option value="">Italienisch</option>
         <option value="">Vietnamesich</option>
         <option value="">Mexikanisch</option>

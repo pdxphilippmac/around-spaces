@@ -20,11 +20,13 @@
 
 .header {
   font-family: "Amatic SC", cursive;
-  font-size: 20px; /* looks shit */
+  font-size: 28px; /* looks shit */
+  align-items: center;
 
   text-transform: uppercase;
   color: palevioletred;
-  text-shadow: 3px 3px 4px darkslateblue;
+  text-shadow: 5px 5px 5px purple;
+
   height: 80px;
   justify-content: center;
   background-image: -webkit-gradient(
