@@ -32,6 +32,8 @@
 
   display: flex;
   width: 100%;
+  box-shadow: 0px 2px 5px 2px black;
+  z-index: 1;
 }
 
 .filter__list {
@@ -44,6 +46,8 @@
   flex-grow: 1;
 
   padding: 8px;
+  box-shadow: 0px 2px 5px 2px black;
+  z-index: 1;
 }
 
 .filter {
@@ -82,4 +86,6 @@
   margin: 5px;
   justify-content: center;
   display: flex;
+  box-shadow: 0px 2px 5px 2px black;
+  z-index: 1;
 }
