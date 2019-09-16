@@ -1,7 +1,8 @@
 import React from "react";
 import Filter from "./Filter";
 import { iceCreamFilter } from "../api/iceCreamFilter";
-function FilterList() {
+
+function FilterList(props) {
   return (
     <div className="filter__list">
       {iceCreamFilter.map(iceCreamFilter => {
@@ -9,6 +10,7 @@ function FilterList() {
           <Filter
             key={iceCreamFilter.categories}
             iceCreamFilter={iceCreamFilter}
+            onChange={props.onFilterChange}
           />
         );
       })}
