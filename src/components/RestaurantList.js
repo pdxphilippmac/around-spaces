@@ -2,15 +2,14 @@ import React from "react";
 import Restaurant from "./Restaurant";
 import { iceCreamShops } from "../api/icecreamshops";
 
-function RestaurantList(props) {
-  //props=selectedFilter
-  // console.log(props.selectedFilter);
+function RestaurantList({ selectedFilter }) {
   const filterediceCreamShop = iceCreamShops.filter(filteredShops => {
-    if (props.selectedFilter.name === "Type") {
-      return filteredShops.categories.includes(props.selectedFilter.value);
+    // let keepRestaurants = true;
+    if (selectedFilter.Type) {
+      return filteredShops.categories.includes(selectedFilter.Type);
     }
-    if (props.selectedFilter.name === "Distance") {
-      switch (props.selectedFilter.value) {
+    if (selectedFilter.Distance) {
+      switch (selectedFilter.Distance) {
         case "<5min":
           return filteredShops.distance < 5;
         case "<15min":
@@ -20,10 +19,9 @@ function RestaurantList(props) {
         default:
           break;
       }
-      // return filteredShops.distance < 3;
     }
-    if (props.selectedFilter.name === "Rating") {
-      switch (props.selectedFilter.value) {
+    if (selectedFilter.Rating) {
+      switch (selectedFilter.Rating) {
         case "*****":
           return filteredShops.rating >= 5;
         case "****":
@@ -31,22 +29,18 @@ function RestaurantList(props) {
         case "***":
           return filteredShops.rating < 4.0 && filteredShops.rating >= 3;
         case "**":
-          return filteredShops.rating < 2.9;
+          return filteredShops.rating < 3.0 && filteredShops.rating >= 2;
         case "*":
           return filteredShops.rating < 2;
         default:
           break;
       }
+
       // return filteredShops.rating < 5;
     }
     return true;
-    // if (props.selectedFilter.type === "type") {
-    //   return filteredShops.type.includes(props.selectedFilter.type);
-    // }
-
-    // return filteredShops.distance < props.selectedFilter.value;
   });
-  console.log(props.selectedFilter.value);
+
   return (
     <section className="restaurant__list">
       {filterediceCreamShop.map(iceCreamShop => {

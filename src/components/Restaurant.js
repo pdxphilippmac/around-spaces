@@ -8,12 +8,12 @@ function Restaurant(props) {
         className="restaurant__img"
         alt={props.iceCreamShop.title}
       />
-      <div>
-        <h1>{props.iceCreamShop.title}</h1>
-        <p>{props.iceCreamShop.rating}</p>
-        <p>{props.iceCreamShop.distance}</p>
-        <p>{props.iceCreamShop.description}</p>
-      </div>
+
+      <h1>{props.iceCreamShop.title}</h1>
+
+      <p>Rating: {props.iceCreamShop.rating} stars</p>
+      <p>Distance: {props.iceCreamShop.distance} min.</p>
+      <p>Description: {props.iceCreamShop.description}</p>
     </div>
   );
 }
