@@ -6,15 +6,21 @@ import FilterList from "./components/FilterList";
 import RestaurantList from "./components/RestaurantList";
 
 function App() {
-  function handleFilterChange(filter, name) {
-    console.log(filter, name);
+  const [filter, setFilter] = React.useState("");
+  function handleFilterChange(name, value) {
+    console.log(`${filter}, ${name}`);
+    const newFilter = {
+      name: name,
+      value: value
+    };
+    setFilter(newFilter);
   }
   return (
     <div className="App">
       <Header />
       <main>
         <FilterList onFilterChange={handleFilterChange} />
-        <RestaurantList />
+        <RestaurantList selectedFilter={filter} />
       </main>
     </div>
   );

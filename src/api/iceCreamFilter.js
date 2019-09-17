@@ -3,7 +3,7 @@ export const iceCreamFilter = [
 
   {
     name: "Distance",
-    options: ["<2min", "<5min", "<10min"]
+    options: ["<5min", "<15min", "<60min"]
   },
   {
     name: "Rating",

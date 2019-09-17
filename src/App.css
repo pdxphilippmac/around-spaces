@@ -16,6 +16,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #275950;
 }
 
 .header {
@@ -75,6 +76,13 @@
   align-items: flex-start;
   background: #428c7f;
   overflow: hidden;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, #275950),
+    color-stop(100, #141726)
+  );
 }
 .restaurant {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

@@ -11,9 +11,9 @@ export const iceCreamShops = [
   {
     imgSrc: "https://myrealdomain.com/images250_/icecream-cartoon-3.png",
     title: "Jen and Berries",
-    categories: ["american", "icecream", "vegan"],
-    distance: 60 /*in Minuten*/,
-    rating: 3.5,
+    categories: ["american", "icecream"],
+    distance: 12 /*in Minuten*/,
+    rating: 1,
     description: "Awesome IceCream but fake "
   },
 
@@ -22,8 +22,8 @@ export const iceCreamShops = [
       "https://cdn2.vectorstock.com/i/1000x1000/43/01/italian-ice-cream-logo-pink-sign-vector-19744301.jpg",
     title: "Gelato Italiano",
     categories: ["italian", "icecream", "vegan"],
-    distance: 60 /*in Minuten*/,
-    rating: 3.5,
+    distance: 32 /*in Minuten*/,
+    rating: 2.5,
     description: "IceCream the italian way. nois. "
   }
 ];
