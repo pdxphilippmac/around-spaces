@@ -1,20 +1,29 @@
 import React from "react";
 
-function Filter(props) {
+function Filter({ iceCreamFilter, onChange, preSelectedFilter }) {
   // const [filter, setFilter] = React.useState("");
   return (
     <>
       <select
         className="filter"
-        onChange={event =>
-          props.onChange(props.iceCreamFilter.name, event.target.value)
-        }
+        onChange={event => {
+          onChange(iceCreamFilter.name, event.target.value);
+        }}
+        value={preSelectedFilter}
       >
-        <option>{props.iceCreamFilter.name}</option>
+        <option value="">{iceCreamFilter.name}</option>
 
-        {props.iceCreamFilter.options.map(singleIceCreamFilter => {
+        {iceCreamFilter.options.map(singleIceCreamFilter => {
+          // const selected = singleIceCreamFilter === preSelectedFilter;
+
           return (
-            <option key={singleIceCreamFilter}>{singleIceCreamFilter}</option>
+            <option
+              key={singleIceCreamFilter}
+              value={singleIceCreamFilter}
+              // selected={selected}
+            >
+              {singleIceCreamFilter}
+            </option>
           );
         })}
       </select>
