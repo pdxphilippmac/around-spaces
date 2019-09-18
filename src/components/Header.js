@@ -26,6 +26,8 @@ const StyledHeader = styled.header`
   width: 100%;
   box-shadow: 0px 2px 5px 2px black;
   z-index: 1;
+
+  /*props example*/
 `;
 
 function Header() {

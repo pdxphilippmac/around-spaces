@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import FilterList from "./components/FilterList";
 import RestaurantList from "./components/RestaurantList";
 import styled from "styled-components";
+import { GlobalStyle } from "./components/GlobalStyle.js";
 
 const StyledApp = styled.div`
   height: 100vh;
@@ -15,7 +16,7 @@ const StyledApp = styled.div`
 
 const StyledMain = styled.main`
   width: 100%;
-
+  overflow: scroll;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -39,6 +40,7 @@ function App() {
   return (
     <StyledApp>
       <Header />
+
       <StyledMain>
         <FilterList
           preSelectedFilter={filters}

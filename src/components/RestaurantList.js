@@ -9,7 +9,7 @@ const StyledIceShopList = styled.section`
   justify-content: space-around;
   align-items: flex-start;
   background: #428c7f;
-  overflow: hidden;
+  overflow: scroll;
   background-image: -webkit-gradient(
     linear,
     left bottom,

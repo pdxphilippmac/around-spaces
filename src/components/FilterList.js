@@ -8,13 +8,19 @@ const StyledFilterlist = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  background: #014040;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, #275950),
+    color-stop(100, #141726)
+  );
   align-items: center;
   flex-grow: 1;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 8px;
   box-shadow: 0px 2px 5px 2px black;
-  z-index: 1;
+  z-index: 10;
 `;
 
 function FilterList({ onFilterChange, preSelectedFilter }) {
