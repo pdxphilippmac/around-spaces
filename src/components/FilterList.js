@@ -2,7 +2,7 @@ import React from "react";
 import Filter from "./Filter";
 import { iceCreamFilter } from "../api/iceCreamFilter";
 
-function FilterList(props) {
+function FilterList({ onFilterChange, preSelectedFilter }) {
   return (
     <div className="filter__list">
       {iceCreamFilter.map(iceCreamFilter => {
@@ -10,7 +10,8 @@ function FilterList(props) {
           <Filter
             key={iceCreamFilter.categories}
             iceCreamFilter={iceCreamFilter}
-            onChange={props.onFilterChange}
+            onChange={onFilterChange}
+            preSelectedFilter={preSelectedFilter[Filter.name]}
           />
         );
       })}

@@ -5,7 +5,11 @@ import FilterList from "./components/FilterList";
 import RestaurantList from "./components/RestaurantList";
 
 function App() {
-  const [filters, setFilters] = React.useState({});
+  const [filters, setFilters] = React.useState({
+    distance: "< 2min",
+    rating: "***",
+    categories: "american"
+  });
   function handleFilterChange(name, value) {
     // const newFilter = {
     //   name: name,
@@ -19,7 +23,10 @@ function App() {
     <div className="App">
       <Header />
       <main>
-        <FilterList onFilterChange={handleFilterChange} />
+        <FilterList
+          preSelectedFilter={filters}
+          onFilterChange={handleFilterChange}
+        />
         <RestaurantList selectedFilter={filters} />
       </main>
     </div>
