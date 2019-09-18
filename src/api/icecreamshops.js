@@ -1,7 +1,7 @@
 export const iceCreamShops = [
   {
     imgSrc:
-      "https://library.kissclipart.com/20181204/aee/kissclipart-ben-jerrys-ice-cream-illustration-clipart-ice-c-1a35ff02cb1ffdfa.jpg",
+      "https://www.seekpng.com/png/full/377-3774740_ben-jerrys-a-retail-food-company-ben-jerrys.png",
     title: "Ben and Jerrys",
     categories: ["american", "icecream", "vegan"],
     distance: 1 /*eine Minute*/,
@@ -19,7 +19,7 @@ export const iceCreamShops = [
 
   {
     imgSrc:
-      "https://cdn2.vectorstock.com/i/1000x1000/43/01/italian-ice-cream-logo-pink-sign-vector-19744301.jpg",
+      "https://harvestmarket.org.au/wp-content/uploads/2017/03/dellavallegelatonaturale_logo_pms.jpg",
     title: "Gelato Italiano",
     categories: ["italian", "icecream", "vegan"],
     distance: 32 /*in Minuten*/,

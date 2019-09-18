@@ -1,6 +1,23 @@
 import React from "react";
 import Restaurant from "./Restaurant";
 import { iceCreamShops } from "../api/icecreamshops";
+import styled from "styled-components";
+
+const StyledIceShopList = styled.section`
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background: #428c7f;
+  overflow: hidden;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, #275950),
+    color-stop(100, #141726)
+  );
+`;
 
 function RestaurantList({ selectedFilter }) {
   const filterediceCreamShop = iceCreamShops.filter(filteredShops => {
@@ -64,13 +81,13 @@ function RestaurantList({ selectedFilter }) {
   });
 
   return (
-    <section className="restaurant__list">
+    <StyledIceShopList>
       {filterediceCreamShop.map(iceCreamShop => {
         return (
           <Restaurant key={iceCreamShop.title} iceCreamShop={iceCreamShop} />
         );
       })}
-    </section>
+    </StyledIceShopList>
   );
 }
 

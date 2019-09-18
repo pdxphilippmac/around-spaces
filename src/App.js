@@ -3,12 +3,29 @@ import "./App.css";
 import Header from "./components/Header";
 import FilterList from "./components/FilterList";
 import RestaurantList from "./components/RestaurantList";
+import styled from "styled-components";
+
+const StyledApp = styled.div`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #275950;
+`;
+
+const StyledMain = styled.main`
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+`;
 
 function App() {
   const [filters, setFilters] = React.useState({
-    distance: "< 2min",
-    rating: "***",
-    categories: "american"
+    Distance: "< 2min",
+    rating: "***"
+    // Type: "american"
   });
   function handleFilterChange(name, value) {
     // const newFilter = {
@@ -20,16 +37,16 @@ function App() {
     setFilters(newFilters);
   }
   return (
-    <div className="App">
+    <StyledApp>
       <Header />
-      <main>
+      <StyledMain>
         <FilterList
           preSelectedFilter={filters}
           onFilterChange={handleFilterChange}
         />
         <RestaurantList selectedFilter={filters} />
-      </main>
-    </div>
+      </StyledMain>
+    </StyledApp>
   );
 }
 
