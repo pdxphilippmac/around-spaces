@@ -1,10 +1,12 @@
 import React from "react";
-import "./App.css";
+
 import Header from "./components/Header";
-import FilterList from "./components/FilterList";
-import RestaurantList from "./components/RestaurantList";
+
 import styled from "styled-components";
-import { GlobalStyle } from "./components/GlobalStyle.js";
+// import { GlobalStyle } from "./components/GlobalStyle.js";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import New from "./pages/New";
 
 const StyledApp = styled.div`
   height: 100vh;
@@ -14,40 +16,14 @@ const StyledApp = styled.div`
   background: #275950;
 `;
 
-const StyledMain = styled.main`
-  width: 100%;
-  overflow: scroll;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-`;
-
 function App() {
-  const [filters, setFilters] = React.useState({
-    Distance: "< 2min",
-    rating: "***"
-    // Type: "american"
-  });
-  function handleFilterChange(name, value) {
-    // const newFilter = {
-    //   name: name,
-    //   value: value
-    // };
-    const newFilters = { ...filters }; // or Object.assign({}, filters) -> copy an object
-    newFilters[name] = value;
-    setFilters(newFilters);
-  }
   return (
     <StyledApp>
       <Header />
-
-      <StyledMain>
-        <FilterList
-          preSelectedFilter={filters}
-          onFilterChange={handleFilterChange}
-        />
-        <RestaurantList selectedFilter={filters} />
-      </StyledMain>
+      <Router>
+        <Route path="/" exact component={Home} />
+        <Route path="/about/" component={New} />
+      </Router>
     </StyledApp>
   );
 }

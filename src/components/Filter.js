@@ -8,6 +8,8 @@ const StyledFilter = styled.select`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 5px;
+  color: ${props => (props.value ? "red" : null)};
+  border: ${props => (props.value ? "red solid 6px" : null)};
 `;
 
 function Filter({ iceCreamFilter, onChange, preSelectedFilter }) {
@@ -20,6 +22,7 @@ function Filter({ iceCreamFilter, onChange, preSelectedFilter }) {
           onChange(iceCreamFilter.name, event.target.value);
         }}
         value={preSelectedFilter}
+        color="red"
       >
         <option value="">{iceCreamFilter.name}</option>
 
