@@ -7,7 +7,7 @@ const StyledHeader = styled.header`
   flex-shrink: 0;
   font-size: 28px; /* looks shit */
   align-items: center;
-
+  background-color: ${props => props.theme.main};
   text-transform: uppercase;
   color: palevioletred;
   text-shadow: 5px 5px 5px purple;

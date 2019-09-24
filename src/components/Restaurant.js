@@ -47,6 +47,7 @@ function Restaurant(props) {
       <p>Rating: {props.iceCreamShop.rating} stars</p>
       <p>Distance: {props.iceCreamShop.distance} min.</p>
       <p>Description: {props.iceCreamShop.description}</p>
+      <p>Category: {props.iceCreamShop.categories}</p>
     </StyledIceShop>
   );
 }

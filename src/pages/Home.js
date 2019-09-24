@@ -12,20 +12,34 @@ const StyledMain = styled.main`
   text-align: center;
 `;
 
-export default function Home() {
+export default function Home({ history, location }) {
+  //
+  //
+  const params = new URLSearchParams(location.search);
+
+  //
+  //
   const [filters, setFilters] = React.useState({
-    Distance: "< 2min",
-    rating: "***"
-    // Type: "american"
+    Type: params.get("type") || "",
+    Distance: params.get("distance") || "",
+    Rating: params.get("rating") || ""
   });
+  // Type: "american"
+
   function handleFilterChange(name, value) {
     // const newFilter = {
     //   name: name,
     //   value: value
     // };
     const newFilters = { ...filters }; // or Object.assign({}, filters) -> copy an object
-    newFilters[name] = value;
+    if (value) {
+      newFilters[name] = value;
+    } else {
+      delete newFilters[name];
+    }
+
     setFilters(newFilters);
+    history.push(`${location.pathname}?${params.toString()}`);
   }
   return (
     <StyledMain>

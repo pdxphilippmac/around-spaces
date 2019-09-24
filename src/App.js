@@ -2,7 +2,7 @@ import React from "react";
 
 import Header from "./components/Header";
 
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 // import { GlobalStyle } from "./components/GlobalStyle.js";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -15,16 +15,22 @@ const StyledApp = styled.div`
   align-items: center;
   background: #275950;
 `;
+const theme = {
+  main: "yellow"
+};
 
 function App() {
   return (
-    <StyledApp>
-      <Header />
-      <Router>
-        <Route path="/" exact component={Home} />
-        <Route path="/about/" component={New} />
-      </Router>
-    </StyledApp>
+    <ThemeProvider theme={theme}>
+      <StyledApp>
+        <Header theme={theme} />
+
+        <Router>
+          <Route path="/" exact component={Home} />
+          <Route path="/about/" component={New} />
+        </Router>
+      </StyledApp>
+    </ThemeProvider>
   );
 }
 
